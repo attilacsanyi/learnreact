@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@scrimba/business-card": ["libs/business-card/src/index.ts"],
       "@scrimba/react-facts": ["libs/react-facts/src/index.ts"]
     }
   },

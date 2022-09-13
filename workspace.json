@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "business-card": "libs/business-card",
     "react-facts": "libs/react-facts",
     "scrimba": "apps/scrimba",
     "scrimba-e2e": "apps/scrimba-e2e"
