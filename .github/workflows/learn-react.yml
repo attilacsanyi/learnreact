@@ -24,7 +24,7 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.2
     with:
       node-version: '16'
-      environment-variables: /
+      environment-variables: |
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         SITE_ID_SCRIMBA: ${{ secrets.SITE_ID_SCRIMBA }}
       install-command: npm ci --legacy-peer-deps
@@ -40,7 +40,7 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.2
     with:
       node-version: '16'
-      environment-variables: /
+      environment-variables: |
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         SITE_ID_SCRIMBA: ${{ secrets.SITE_ID_SCRIMBA }}
       install-command: npm ci --legacy-peer-deps
