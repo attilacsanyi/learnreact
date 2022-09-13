@@ -5,9 +5,12 @@
   "scripts": {
     "migrate": "nx migrate latest",
     "migrate:run": "nx migrate --run-migrations",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "scrimba:start": "nx run scrimba:serve",
+    "build": "nx affected --target=build --parallel --max-parallel=4",
+    "test": "nx affected --target=test --parallel --max-parallel=3",
+    "lint": "nx affected --target=lint --fix --parallel --max-parallel=2",
+    "ci": "npm run lint && npm run test && npm run build",
+    "e2e:scrimba": "nx e2e scrimba-e2e --watch"
   },
   "private": true,
   "dependencies": {

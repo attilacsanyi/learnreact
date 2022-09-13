@@ -52,7 +52,9 @@
       },
       "configurations": {
         "development": {
-          "buildTarget": "scrimba:build:development"
+          "buildTarget": "scrimba:build:development",
+          "host": "localhost",
+          "port": 1301
         },
         "production": {
           "buildTarget": "scrimba:build:production",
