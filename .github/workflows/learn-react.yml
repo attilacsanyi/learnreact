@@ -22,7 +22,7 @@ concurrency:
 jobs:
   main:
     name: Main
-    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.2
+    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.7
     with:
       node-version: '16'
       install-command: npm ci --legacy-peer-deps
@@ -35,7 +35,7 @@ jobs:
 
   agents:
     name: Agents
-    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.2
+    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.7
     with:
       node-version: '16'
       environment-variables: |
