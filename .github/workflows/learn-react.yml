@@ -1,0 +1,40 @@
+# Documentation
+# https://nx.app/docs/configuring-ci
+
+# Curtesy for Jo Hanna Pearce for the idea
+# https://github.com/jdpearce/nx-large-repo/actions/runs/2229075101/workflow
+name: Learn React
+on:
+  push:
+    branches:
+      - main
+
+env:
+  NX_VERBOSE_LOGGING: true
+
+# Each push should cancel workflows in progress and start a new one
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  main:
+    name: Main
+    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.2
+    with:
+      node-version: '16'
+      install-command: npm ci --legacy-peer-deps
+      parallel-commands-on-agents: |
+        npm run build
+        npm run test
+        npm run lint
+      final-commands: |
+        NX_CLOUD_DISTRIBUTED_EXECUTION=false npm run deploy:prod
+
+  agents:
+    name: Agents
+    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.2
+    with:
+      node-version: '16'
+      install-command: npm ci --legacy-peer-deps
+      number-of-agents: 4
