@@ -12,6 +12,8 @@
     "lint": "nx affected --target=lint --fix --parallel --max-parallel=2",
     "ci": "npm run lint && npm run test && npm run build",
     "e2e:scrimba": "nx e2e scrimba-e2e --watch",
+    "deploy:prod-draft": "nx affected --target=deploy-prod-draft",
+    "deploy:prod": "nx affected --target=deploy-prod",
     "format": "nx format:write --all",
     "prepare": "husky install"
   },
@@ -56,6 +58,7 @@
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "lite-server": "2.6.1",
+    "netlify-cli": "11.7.1",
     "nx": "14.7.5",
     "prettier": "2.6.2",
     "pretty-quick": "3.1.3",

@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/"
+  to = "scrimba/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/scrimba/*"
+  to = "web/index.html"
+  status = 200

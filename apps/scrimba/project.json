@@ -80,6 +80,20 @@
         "jestConfig": "apps/scrimba/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "deploy-prod-draft": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx netlify deploy --site=$SITE_ID_SCRIMBA --alias=attila -d ../../dist/apps/scrimba.prod -o",
+        "cwd": "netlify/scrimba.prod"
+      }
+    },
+    "deploy-prod": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx netlify deploy --site=$SITE_ID_SCRIMBA -d ../../dist/apps/scrimba.prod -p -o",
+        "cwd": "netlify/scrimba.prod"
+      }
     }
   },
   "tags": []
