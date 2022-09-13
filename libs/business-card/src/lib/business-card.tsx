@@ -5,7 +5,7 @@ import { Info } from './components/Info';
 import { Interests } from './components/Interests';
 
 export const BusinessCard = ({ baseUrl }: { baseUrl: string }) => (
-  <div className={styles['container']}>
+  <div className={styles['business-card']}>
     <Info />
     <About />
     <Interests />
