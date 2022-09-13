@@ -1,5 +1,3 @@
-
-
 # Learnreact
 
 This project was generated using [Nx](https://nx.dev) which also serve as a mono repo of all my React projects.

@@ -11,7 +11,8 @@
     "test": "nx affected --target=test --parallel --max-parallel=3",
     "lint": "nx affected --target=lint --fix --parallel --max-parallel=2",
     "ci": "npm run lint && npm run test && npm run build",
-    "e2e:scrimba": "nx e2e scrimba-e2e --watch"
+    "e2e:scrimba": "nx e2e scrimba-e2e --watch",
+    "format": "nx format:write --all"
   },
   "private": true,
   "dependencies": {
