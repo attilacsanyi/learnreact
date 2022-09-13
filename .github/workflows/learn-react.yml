@@ -11,6 +11,7 @@ on:
 
 env:
   NX_VERBOSE_LOGGING: true
+  SITE_ID_SCRIMBA: ${{ secrets.SITE_ID_SCRIMBA }}
 
 # Each push should cancel workflows in progress and start a new one
 concurrency:

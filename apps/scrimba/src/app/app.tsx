@@ -6,7 +6,6 @@ export function App() {
     <>
       <NxWelcome title="scrimba" />
       <div />
-      <footer>Footer</footer>
     </>
   );
 }
