@@ -1,11 +1,11 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { MainContent } from './components/MainContent';
 
-export function ReactFacts() {
+export function ReactFacts({ baseUrl }: { baseUrl: string }) {
   return (
     <div className="page">
-      <Header />
+      <Header baseUrl={baseUrl} />
       <MainContent />
       <Footer />
     </div>
