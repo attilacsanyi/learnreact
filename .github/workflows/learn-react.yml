@@ -26,6 +26,9 @@ jobs:
     with:
       number-of-agents: 3
       node-version: '16'
+      environment-variables: |
+        NETLIFY_AUTH_TOKEN=${{ process.env.NETLIFY_AUTH_TOKEN }}
+        SITE_ID_SCRIMBA=${{ process.env.SITE_ID_SCRIMBA }}
       parallel-commands-on-agents: |
         npm run build
         npm run test
@@ -39,3 +42,6 @@ jobs:
     with:
       number-of-agents: 3
       node-version: '16'
+      environment-variables: |
+        NETLIFY_AUTH_TOKEN=${{ process.env.NETLIFY_AUTH_TOKEN }}
+        SITE_ID_SCRIMBA=${{ process.env.SITE_ID_SCRIMBA }}
