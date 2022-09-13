@@ -25,9 +25,6 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.2
     with:
       node-version: '16'
-      environment-variables: |
-        NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
-        SITE_ID_SCRIMBA: $SITE_ID_SCRIMBA
       install-command: npm ci --legacy-peer-deps
       parallel-commands-on-agents: |
         npm run build
