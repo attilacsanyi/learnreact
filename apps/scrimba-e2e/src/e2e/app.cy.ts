@@ -1,4 +1,4 @@
-import { getGreeting } from '../support/app.po';
+import { getTitle } from '../support/app.po';
 
 describe('scrimba', () => {
   beforeEach(() => cy.visit('/'));
@@ -8,6 +8,6 @@ describe('scrimba', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome scrimba');
+    getTitle().contains('React Facts');
   });
 });

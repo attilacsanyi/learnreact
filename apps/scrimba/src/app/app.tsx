@@ -1,12 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import NxWelcome from './nx-welcome';
+import { ReactFacts } from '@scrimba/react-facts';
 
 export function App() {
   return (
     <>
-      <NxWelcome title="scrimba" />
+      <ReactFacts />
       <div />
-      <footer>Footer</footer>
     </>
   );
 }

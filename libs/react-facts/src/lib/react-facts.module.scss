@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.page {
+  display: flex;
+
+  /*vertically stack children*/
+  flex-direction: column;
+
+  /* expand to take full height of page */
+  /* min-height overrides both height & max-height */
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  background-color: #21222a;
+  padding: 30px 25px;
+  height: 90px;
+}
+
+.nav--logo_text,
+.nav--title {
+  margin: 0;
+}
+
+.nav--logo_text {
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 22px;
+
+  color: #61dafb;
+}
+
+.nav--title {
+  color: #deebf8;
+  font-weight: 600;
+}
+
+.nav--logo {
+  width: 30px;
+  margin-right: 7px;
+}
+
+main {
+  flex-grow: 1;
+  padding: 60px 30px;
+
+  color: white;
+
+  background: #282d35 url('/assets/react-facts/react-icon-large.png') no-repeat
+    right 25%;
+}
+
+.main--title {
+  margin: 0;
+  font-size: 39px;
+}
+
+.main--facts {
+  letter-spacing: -0.05em;
+  margin-top: 30px;
+}
+
+.main--facts > li {
+  padding-block: 10px;
+  max-width: 350px;
+}
+
+/** https://developer.mozilla.org/en-US/docs/Web/CSS/::marker */
+.main--facts > li::marker {
+  color: #61dafb;
+  font-size: 1.4rem;
+}
+
+.footer {
+  padding: 30px 25px;
+  color: #deebf8;
+
+  background-color: #21222a;
+}
