@@ -1,14 +1,14 @@
 import styles from './business-card.module.scss';
+import { About } from './components/About';
+import { Footer } from './components/Footer';
+import { Info } from './components/Info';
+import { Interests } from './components/Interests';
 
-/* eslint-disable-next-line */
-export interface BusinessCardProps {}
-
-export function BusinessCard(props: BusinessCardProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to BusinessCard!</h1>
-    </div>
-  );
-}
-
-export default BusinessCard;
+export const BusinessCard = ({ baseUrl }: { baseUrl: string }) => (
+  <div className={styles['container']}>
+    <Info />
+    <About />
+    <Interests />
+    <Footer />
+  </div>
+);
