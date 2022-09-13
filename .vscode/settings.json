@@ -1,0 +1,31 @@
+{
+  // Place your settings in this file to overwrite default and user settings.
+  // Files
+  "files.exclude": {
+    ".git": true,
+    ".DS_Store": true,
+    ".history": true
+  },
+
+  // Search
+  "search.exclude": {
+    ".vscode": true,
+    ".history": true,
+    ".angular": true,
+    "dist": true,
+    "node_modules": true,
+    "*lock.json": true,
+    "*.svg": true
+  },
+  // Typescript
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // Editor
+  "window.title": "${rootName}${separator}${activeEditorLong} ${dirty}",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.foldingImportsByDefault": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
