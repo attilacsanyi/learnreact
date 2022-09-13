@@ -25,8 +25,8 @@ jobs:
     with:
       node-version: '16'
       environment-variables: |
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        SITE_ID_SCRIMBA: ${{ secrets.SITE_ID_SCRIMBA }}
+        NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
+        SITE_ID_SCRIMBA: $SITE_ID_SCRIMBA
       install-command: npm ci --legacy-peer-deps
       parallel-commands-on-agents: |
         npm run build
@@ -41,7 +41,7 @@ jobs:
     with:
       node-version: '16'
       environment-variables: |
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        SITE_ID_SCRIMBA: ${{ secrets.SITE_ID_SCRIMBA }}
+        NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
+        SITE_ID_SCRIMBA: $SITE_ID_SCRIMBA
       install-command: npm ci --legacy-peer-deps
       number-of-agents: 4
