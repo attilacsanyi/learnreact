@@ -11,6 +11,7 @@ on:
 
 env:
   NX_VERBOSE_LOGGING: true
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
   SITE_ID_SCRIMBA: ${{ secrets.SITE_ID_SCRIMBA }}
 
 # Each push should cancel workflows in progress and start a new one
