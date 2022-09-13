@@ -5,5 +5,5 @@
 
 [[redirects]]
   from = "/scrimba/*"
-  to = "web/index.html"
+  to = "scrimba/index.html"
   status = 200
