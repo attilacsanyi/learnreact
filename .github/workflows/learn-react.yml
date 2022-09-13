@@ -1,5 +1,5 @@
 # Documentation
-# https://nx.app/docs/configuring-ci
+# https://nx.dev/recipes/ci-setup
 
 # Curtesy for Jo Hanna Pearce for the idea
 # https://github.com/jdpearce/nx-large-repo/actions/runs/2229075101/workflow
@@ -21,11 +21,14 @@ concurrency:
 
 jobs:
   main:
-    name: Main
+    name: Nx Cloud - Main Job
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.7
     with:
+      number-of-agents: 3
       node-version: '16'
-      install-commands: npm ci --legacy-peer-deps
+      environment-variables: |
+        NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
+        SITE_ID_SCRIMBA: $SITE_ID_SCRIMBA
       parallel-commands-on-agents: |
         npm run build
         npm run test
@@ -34,12 +37,11 @@ jobs:
         NX_CLOUD_DISTRIBUTED_EXECUTION=false npm run deploy:prod
 
   agents:
-    name: Agents
+    name: Nx Cloud - Agents
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.7
     with:
+      number-of-agents: 3
       node-version: '16'
       environment-variables: |
         NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
         SITE_ID_SCRIMBA: $SITE_ID_SCRIMBA
-      install-commands: npm ci --legacy-peer-deps
-      number-of-agents: 4
