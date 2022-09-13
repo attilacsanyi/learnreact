@@ -9,7 +9,7 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/scrimba",
+        "outputPath": "dist/apps/scrimba.prod/scrimba",
         "index": "apps/scrimba/src/index.html",
         "baseHref": "/",
         "main": "apps/scrimba/src/main.tsx",
@@ -25,7 +25,9 @@
           "extractLicenses": false,
           "optimization": false,
           "sourceMap": true,
-          "vendorChunk": true
+          "vendorChunk": true,
+          "deployUrl": "",
+          "baseHref": "/"
         },
         "production": {
           "fileReplacements": [
@@ -39,7 +41,9 @@
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,
-          "vendorChunk": false
+          "vendorChunk": false,
+          "deployUrl": "/scrimba/",
+          "baseHref": "/scrimba"
         }
       }
     },
