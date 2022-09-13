@@ -4,6 +4,16 @@
   "affected": {
     "defaultBase": "main"
   },
+  "implicitDependencies": {
+    "package.json": {
+      "scripts": "*",
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*",
+    ".github/workflows/learn-react.yml": "*",
+    "netlify/web*/*.toml": ["scrimba"]
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
