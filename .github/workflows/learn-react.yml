@@ -11,8 +11,6 @@ on:
 
 env:
   NX_VERBOSE_LOGGING: true
-  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-  SITE_ID_SCRIMBA: ${{ secrets.SITE_ID_SCRIMBA }}
 
 # Each push should cancel workflows in progress and start a new one
 concurrency:
@@ -22,6 +20,7 @@ concurrency:
 jobs:
   main:
     name: Nx Cloud - Main Job
+    # https://github.com/nrwl/ci/tree/v0.7#configuration-options-for-the-main-job-nx-cloud-mainyml
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.7
     with:
       number-of-agents: 3
@@ -30,11 +29,10 @@ jobs:
         npm run build
         npm run test
         npm run lint
-      final-commands: |
-        NX_CLOUD_DISTRIBUTED_EXECUTION=false SITE_ID_SCRIMBA=771857ae-eebf-47e3-84f2-903707b0ed2f npm run deploy:prod
 
   agents:
     name: Nx Cloud - Agents
+    # https://github.com/nrwl/ci/tree/v0.7#configuration-options-for-agent-jobs-nx-cloud-agentsyml
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.7
     with:
       number-of-agents: 3
