@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "scrimba": "apps/scrimba",
+    "scrimba-e2e": "apps/scrimba-e2e"
+  }
+}
