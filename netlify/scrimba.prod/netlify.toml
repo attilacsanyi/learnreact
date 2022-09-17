@@ -1,9 +1,9 @@
 [[redirects]]
   from = "/"
-  to = "scrimba/index.html"
-  status = 200
+  to = "/scrimba"
+  status = 302
 
 [[redirects]]
   from = "/scrimba/*"
-  to = "scrimba/index.html"
-  status = 200
+  to = "/scrimba"
+  status = 302

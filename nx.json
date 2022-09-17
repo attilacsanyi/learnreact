@@ -12,7 +12,7 @@
     },
     ".eslintrc.json": "*",
     ".github/workflows/learn-react.yml": "*",
-    "netlify/web*/*.toml": ["scrimba"]
+    "netlify/scrimba*/*.toml": ["scrimba"]
   },
   "tasksRunnerOptions": {
     "default": {
