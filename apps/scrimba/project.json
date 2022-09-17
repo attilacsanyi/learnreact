@@ -85,7 +85,7 @@
     "deploy-prod-draft": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npx netlify deploy --site=$SITE_ID_SCRIMBA --alias=attila -d ../../dist/apps/scrimba.prod -o",
+        "command": "npx netlify deploy --site=$SITE_ID_SCRIMBA --alias=nx -d ../../dist/apps/scrimba.prod -o",
         "cwd": "netlify/scrimba.prod"
       }
     },
