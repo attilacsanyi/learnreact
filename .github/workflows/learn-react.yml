@@ -21,6 +21,9 @@ concurrency:
 
 jobs:
   main:
+    environment:
+      name: production
+      url: https://scrimba-learn-react.netlify.app/scrimba
     name: Nx Cloud - Main Job
     # https://github.com/nrwl/ci/tree/v0.7#configuration-options-for-the-main-job-nx-cloud-mainyml
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.7
